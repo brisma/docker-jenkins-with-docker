@@ -1,4 +1,4 @@
-FROM jenkins
+FROM jenkins/jenkins:lts
 
 MAINTAINER Manuel Valentino <brisma@gmail.com>
 
@@ -11,7 +11,7 @@ RUN curl -sSL https://get.docker.com/ | sh
 
 RUN usermod -aG docker jenkins
 
-RUN curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 
 RUN chmod +x /usr/local/bin/docker-compose
 
