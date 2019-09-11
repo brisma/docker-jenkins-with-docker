@@ -1,7 +1,5 @@
 FROM jenkins/jenkins:lts
 
-MAINTAINER Manuel Valentino <brisma@gmail.com>
-
 USER root
 RUN apt-get -qq update \
    && apt-get -qq -y install \
